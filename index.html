@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="./index.css">
+    <title>Music Player Time</title>
+</head>
+
+<body>
+    <!-- Container for the music player -->
+    <div class="yourScreen">
+        <div class="container innerScreen">
+            <div class="row">
+                <!-- Music player components -->
+                <div class="col">
+                    <div class="track-info">
+                        <!-- Favorite icon -->
+                        <div class="icon icon-favorite" onclick="addToFavorites()">
+                            <ion-icon class="ion-icon" id="favorite-icon" name="heart-outline"></ion-icon>
+                        </div>
+                        <!-- Album art -->
+                        <div class="album-art" id="song-photo"></div>
+                        <div class="track-details col">
+                            <!-- Song title -->
+                            <h3 class="progressBarTitle" id="song-title"></h3>
+                            <!-- Artist name -->
+                            <p class="progressBarArtist" id="artist-name"></p>
+                        </div>
+
+                        <!-- Track progress bar -->
+                        <div class="track-progress">
+                            <div class="progress-bar">
+                                <!-- Progress indicator -->
+                                <div class="progress-indicator"></div>
+                            </div>
+                            <!-- Time display -->
+                            <div class="progress-time">
+                                <span class="time-start">00:00</span>
+                                <span class="time-end">00:00</span>
+                            </div>
+                            <!-- Audio player -->
+                            <audio id="audio-player" ontimeupdate="updatePlayer()">
+                                <!-- Fallback message if audio is not supported -->
+                                <source src="./Audio/goldn-116392.mp3" type="audio/mp3">Your browser does not support the audio element if you see this text.
+                            </audio>
+                        </div>
+
+                        <!-- Player controls -->
+                        <div class="player-controls col">
+                            <!-- Previous track button -->
+                            <div class="icon icon-prev" onclick="skip('backward')">
+                                <ion-icon class="ion-icon" name="play-skip-back-outline"></ion-icon>
+                            </div>
+                            <!-- Play/Pause button -->
+                            <div class="icon icon-play-pause" onclick="playPause()">
+                                <ion-icon class="ion-icon" id="play-pause-icon" name="play-circle-outline"></ion-icon>     
+                            </div>
+                            <!-- Next track button -->
+                            <div class="icon icon-next" onclick="skip('forward')">
+                                <ion-icon class="ion-icon" name="play-skip-forward-outline"></ion-icon> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ionicons script, you can go to this site to check out the other icons. https://ionic.io/ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Link to the JavaScript file -->
+    <script src="./index.js"></script>
+</body>
+</html>

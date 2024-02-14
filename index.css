@@ -1,0 +1,169 @@
+/* This is the new style sheet. */
+
+/* Styling for the body of the HTML page */
+body {
+    font-family: 'Inter', sans-serif; /* Set the font family */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background: black; /* Set background color */
+}
+
+/* Styling for the main screen */
+.yourScreen {
+    width: 428px; /* Set width */
+    height: 100%; /* Set height */
+    border-radius: 40px; /* Round the corners */
+    padding: 30px; /* Add padding */
+    background: linear-gradient(180deg, #0C72A7 0%, #1A1D1E 76.74%); /* Gradient background */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* Add shadow */
+    display: flex; /* Use flexbox for layout */
+    transition: box-shadow 0.5s ease; /* Smooth transition for box shadow */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Keyframes for shadow color animation */
+@keyframes shadow-color {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 0, 255, 0.5); 
+    }
+    
+    50% { 
+        box-shadow: 0 0 10px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 0,255, 0.5), 0 0 10px rgba(0,255,255,0.5); 
+    }
+
+    100% { 
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 0, 255, 0.5), 0 0 10px rgba(255, 0, 0, 0.5); 
+    }
+}
+
+/* Animation for shadow color on hover */
+.yourScreen:hover {
+    animation: shadow-color 2s infinite alternate; /* Apply animation */
+}
+
+/* Styling for the inner screen */
+.innerScreen {
+    position: relative; /* Set position */
+    justify-self: center; /* Align self */
+    align-items: center; /* Center content vertically */
+    width: 70%; /* Set width */
+}
+
+/* Styling for track information */
+.track-info {
+    background: #0e5981; /* Set background color */
+    border-radius: 70px; /* Round the corners */
+    position: relative; /* Set position */
+    padding: 30px; /* Add padding */
+    box-shadow: 0 -7px 4px rgba(0, 0, 0, 0.25); /* Add shadow */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Set flex direction */
+}
+
+/* Styling for favorite icon */
+.icon-favorite {
+    align-self: end; /* Align self */
+    position: relative; /* Set position */
+}
+
+/* Styling for album art */
+.album-art {
+    background-size: cover; /* Set background size */
+    height: 200px; /* Set height */
+    align-self: center; /* Align self */
+    border-radius: 100px; /* Round the corners */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.61), 0 0 40px rgba(0, 0, 0, 0.219); /* Add shadow */
+}
+
+/* Styling for track details */
+.track-details {
+    text-align: center; /* Center text */
+    margin: 15px 0; /* Set margin */
+}
+
+/* Styling for progress bar title */
+.progressBarTitle {
+    align-self: stretch; /* Align self */
+    color: #FFF; /* Set text color */
+    text-align: center; /* Center text */
+    font-family: Inter; /* Set font family */
+    font-size: 20px; /* Set font size */
+    font-style: normal; /* Set font style */
+    font-weight: 700; /* Set font weight */
+    line-height: normal; /* Set line height */
+    position: relative; /* Set position */
+    margin-bottom: -15px; /* Set negative margin */
+}
+
+
+/* Styling for progress bar artist */
+.progressBarArtist {
+    color: rgba(255, 255, 255, 0.50); /* Set text color with opacity */
+    font-family: Inter; /* Set font family */
+    font-size: 15px; /* Set font size */
+    font-style: normal; /* Set font style */
+    font-weight: 500; /* Set font weight */
+    line-height: normal; /* Set line height */
+    position: relative; /* Set position */
+}
+
+/* Styling for progress bar */
+.progress-bar {
+    height: 10px; /* Set height */
+    background: #ffffff50; /* Set background color with opacity */
+    border-radius: 50px; /* Round the corners */
+    position: relative; /* Set position */
+    margin-bottom: 10px; /* Set bottom margin */
+}
+
+/* Styling for progress indicator */
+.progress-indicator {
+    height: 100%; /* Set height */
+    background-color: white; /* Set background color */
+    border-radius: 50px; /* Round the corners */
+    position: relative; /* Set position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 0; /* Set initial width */
+}
+
+/* Styling for progress time */
+.progress-time {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between elements */
+}
+
+/* Styling for start and end time */
+.time-start, .time-end {
+    color: #FFF; /* Set text color */
+    font-size: 10px; /* Set font size */
+    opacity: 0.6; /* Set opacity */
+}
+
+/* Styling for player controls */
+.player-controls {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between elements */
+    margin: 30px 0; /* Set margin */
+    padding-right: 5px; /* Set right padding */
+    position: relative; /* Set position */
+}
+
+/* Styling for icons */
+.icon {
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+}
+
+/* Styling for ion icons */
+.ion-icon {
+    font-size: 33px; /* Set font size */
+    color: #1a1d1ead; /* Set text color with opacity */
+}
+
+/* Styling for favorite icon */
+#favorite-icon {
+    font-size: 25px; /* Set font size */
+}
